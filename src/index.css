@@ -2,38 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   background-color: black;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 .hotel-container {
-  background-image: url('C:\myminutetravel\New folder\hotel.2.jpg');
+  background-image: url("./assets/hotel.2.jpg");
 }
-.travel{
-  background-image: url('C:\myminutetravel\public\Images\train.jpg');
-}
-
-.flight-1{
-  background-image: url('C:\myminutetravel\New folder\flight1.jpg');
+.travel {
+  background-image: url("./assets/train.jpg");
 }
 
-.road-1{
-  background-image: url('C:\myminutetravel\New folder\road1.jpg');
+.flight-1 {
+  background-image: url("./assets/flight1.jpg");
 }
 
-.hero{
-  background-image: url('C:\myminutetravel\New folder\hero1.jpg') ;
+.road-1 {
+  background-image: url("./assets/road1.jpg");
 }
 
+.hero {
+  background-image: url("./assets/hero1.jpg");
+}

@@ -1,41 +1,32 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
-import Home from './Components/Pages/Home';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
-import Flights from './Components/Pages/Flights';
-import Trains from './Components/Pages/Trains';
-import Hotels from './Components/Pages/Hotels';
-import Buses from './Components/Pages/Buses';
-import Herosection from './Components/Herosection';
-
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Flights from "./pages/Flights";
+import Trains from "./pages/Trains";
+import Hotels from "./pages/Hotels";
+import Buses from "./pages/Buses";
 
 function App() {
   return (
-
-    
     <Router>
-    
-    <div>
-      <Header/>
-      
-      <Routes>
-          <Route path='/Home' exact element={<Home />} />
-          <Route path='/Flights' exact element={<Flights />} />
-          <Route path='/Trains' exact element={<Trains />} />
-          <Route path='/Hotels' exact element={<Hotels />} />
-          <Route path='/Buses' exact element={<Buses />} />
+      <div>
+        <Header className="z-50" />
 
-          
+        <Routes>
+          <Route path="/Home" exact element={<Home />} />
+          <Route path="/Flights" exact element={<Flights />} />
+          <Route path="/Trains" exact element={<Trains />} />
+          <Route path="/Hotels" exact element={<Hotels />} />
+          <Route path="/Buses" exact element={<Buses />} />
+          <Route path="/" exact element={<Home />} />
         </Routes>
-        
-      <Footer/>
-    </div>
+
+        <Footer />
+      </div>
     </Router>
   );
 }
 
 export default App;
-
-
