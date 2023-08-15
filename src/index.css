@@ -31,7 +31,193 @@ code {
 .road-1 {
   background-image: url("./assets/road1.jpg");
 }
+.fsearch {
+  min-height: 100vh;
+  padding: 0;
+  background-image: url(./assets/top-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: jeet 10s ease-in-out infinite;
+}
 
-.hero {
-  background-image: url("./assets/hero1.jpg");
+.main-container {
+  @apply flex min-h-screen flex-1 flex-col items-center w-full bg-dark-1  pb-10 pt-28 max-md:pb-32;
+}
+.topbar {
+  @apply fixed top-0 z-30 flex w-full items-center justify-between bg-dark-2 px-6 py-3;
+}
+.bottombar {
+  @apply fixed bottom-0 z-10 w-full rounded-t-3xl bg-glassmorphism p-4 backdrop-blur-lg xs:px-7 md:hidden;
+}
+
+.bottombar_container {
+  @apply flex items-center justify-between gap-3 xs:gap-5;
+}
+
+.bottombar_link {
+  @apply relative flex flex-col items-center gap-2 rounded-lg p-2 sm:flex-1 sm:px-2 sm:py-2.5;
+}
+
+.leftsidebar {
+  @apply sticky left-0 top-0 z-20 flex h-screen w-fit flex-col justify-between overflow-auto border-r border-r-dark-4 bg-dark-2 pb-5 pt-28 max-md:hidden;
+}
+
+.leftsidebar_link {
+  @apply relative flex justify-start gap-4 rounded-lg p-4;
+}
+@layer utilities {
+  .css-invert {
+    @apply invert-[50%] brightness-200;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    border-radius: 2px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #09090a;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgb(255, 147, 139);
+    border-radius: 50px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 147, 139);
+  }
+}
+.checkmark {
+  background-color: orange;
+}
+
+input:checked ~ .checkmark {
+  background-color: yellow;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkmark:after {
+  top: 6px;
+  left: 6px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: red;
+}
+@media (max-width: 950px) {
+  .center-bar {
+    flex-flow: row wrap;
+    max-width: 800px;
+  }
+  .center-bar #from-1 {
+    width: 100%;
+    order: 1;
+  }
+  #from-2 {
+    width: 100%;
+    order: 2;
+  }
+  #from-3 {
+    width: 48%;
+    order: 3;
+  }
+  #from-4 {
+    width: 48%;
+    order: 4;
+  }
+  #from-5 {
+    width: 100%;
+    order: 5;
+  }
+}
+@media (max-width: 550px) {
+  .center-bar #from-3 {
+    width: 100%;
+    margin-top: 0.4rem;
+  }
+  .center-bar #from-4 {
+    width: 100%;
+    margin-top: 0.4rem;
+  }
+  .center-bar #from-5 {
+    margin-top: 0.4rem;
+    width: 100%;
+  }
+  .last-bar {
+    flex-flow: row wrap;
+  }
+  .last-bar {
+    width: 100%;
+    order: 2;
+    margin-top: 1rem;
+  }
+  .last-bar .first-side {
+    width: 50%;
+    order: 1;
+  }
+   {
+    padding: 2.5rem 0.5rem;
+  }
+}
+@keyframes jeet {
+  0%,
+  100% {
+    background-position: top;
+  }
+  36% {
+    background-position: center;
+  }
+  70% {
+    background-position: bottom;
+  }
+}
+.search-flight {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: orange;
+  padding: 0.9rem 1.8rem;
+  border-radius: 4px;
+  transition: 0.5s ease;
+}
+.search-flight:hover {
+  background-color: yellow;
+}
+.last-card {
+  box-shadow: 0px 0px 4px #888888;
+}
+.last-card:hover {
+  transform: scale(1.1);
+  transition: 5s ease;
+}
+.last-pic img {
+  width: 100%;
+  height: 100%;
+  transition: 5s ease;
+}
+.last-intro a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: 0.5s ease;
+  text-transform: capitalize;
+}
+.last-intro a:hover {
+  text-decoration: underline solid black;
+}
+.trips-card:hover {
+  transform: scale(1.5);
 }

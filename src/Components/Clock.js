@@ -46,7 +46,7 @@ function Clock() {
   const clockStyle = {
     fontFamily: "Share Tech Mono, monospace",
     textAlign: "center",
-    position: "absolute",
+    // position: "absolute",
     color: "#daf6ff",
     textShadow:
       "0 0 20px rgba(10, 175, 230, 1), 0 0 20px rgba(10, 175, 230, 0)",
@@ -54,19 +54,19 @@ function Clock() {
 
   const timeStyle = {
     letterSpacing: "0.05em",
-    fontSize: "80px",
-    padding: "5px 0",
+    fontSize: "20px",
+    padding: " 0",
   };
 
   const dateStyle = {
     letterSpacing: "0.1em",
-    fontSize: "24px",
+    fontSize: "10px",
   };
 
   const textStyle = {
     letterSpacing: "0.1em",
     fontSize: "12px",
-    padding: "20px 0 0",
+    padding: "2px 0 0",
   };
 
   return (
