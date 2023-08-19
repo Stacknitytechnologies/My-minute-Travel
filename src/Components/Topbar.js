@@ -10,7 +10,7 @@ function Topbar() {
         <a href="/" className="flex items-center gap-4">
           <img src={logo} alt="logo" width={50} height={50} />
           <p className="text-heading3-bold text-light-1 max-xs:hidden">
-            My Minute Trip
+            My Minute Travel
           </p>
         </a>
         <div>
