@@ -1,12 +1,37 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
+import { navLinks } from "../constants";
 
 function FlightSearch() {
+  const location = useLocation();
   return (
     <main className="max-w-sm md:max-w-xl lg:max-w-2xl xl:max-w-5xl mx-auto my-auto text-white">
       <div className="text-start w-full">
         <h1 className="text-7xl md:text-5xl tracking-wider font-bold">
           Let The Journey Begin
         </h1>
+      </div>
+      <div className="flex w-full flex-1 flex-row gap-6 px-6 bg-gray-800">
+        {navLinks.map((link) => {
+          const isActive =
+            (location.pathname.includes(link.route) && link.route.length > 1) ||
+            location.pathname === link.link;
+          return (
+            <a
+              href={link.link}
+              className={`leftsidebar_link ${isActive && "bg-orange-600 "}`}
+            >
+              <img
+                src={link.imgURL.default}
+                alt={link.label}
+                width={24}
+                height={24}
+              />
+
+              <p className="text-light-1 max-lg:hidden">{link.label}</p>
+            </a>
+          );
+        })}
       </div>
       <div className="flex flex-col items-center justify-center w-full bg-orange-600 px-4 py-2">
         <div className="w-full flex items-center justify-center gap-2">
