@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import { sidebarLinks } from "../constants";
+import { navLinks } from "../constants";
 
 function FlightSearch() {
   const location = useLocation();
@@ -12,7 +12,7 @@ function FlightSearch() {
         </h1>
       </div>
       <div className="flex w-full flex-1 flex-row gap-6 px-6 bg-gray-800">
-        {sidebarLinks.map((link) => {
+        {navLinks.map((link) => {
           const isActive =
             (location.pathname.includes(link.route) && link.route.length > 1) ||
             location.pathname === link.link;
